@@ -2,7 +2,7 @@
 icon: lucide/user
 ---
 
-# 关于我
+# 关于
 
 ## :wave: Hi，我是 ZhangAoYu
 
