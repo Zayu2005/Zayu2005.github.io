@@ -2,7 +2,7 @@
 icon: lucide/home
 ---
 
-# ZhangAoYu's Blog
+# 文明其精神，野蛮其体魄
 
 > :wave: 欢迎来到我的技术博客！这里记录我在编程路上的学习笔记、技术探索和项目实践。
 
