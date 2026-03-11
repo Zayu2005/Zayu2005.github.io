@@ -62,6 +62,7 @@ nav = [
         ]},
         { "ML & DL" = [
             { "ML & DL" = "blog/dl/index.md" },
+            { "Softmax" = blog/dl/soft.md},
         ]},
         { "工具与环境" = [
             { "工具与环境" = "blog/tools/index.md" },
