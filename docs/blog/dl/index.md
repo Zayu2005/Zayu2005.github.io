@@ -1,5 +1,5 @@
 ---
-icon: simple/kalilinux
+icon: simple/pytorch
 ---
 
-# CTF
+# Machine Learning & Deep Learning
