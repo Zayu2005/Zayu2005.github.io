@@ -16,7 +16,7 @@
         linear-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px),
         linear-gradient(90deg, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
     background-size: 28px 28px;
-    animation: homeIntroOverlayExit 1.85s ease forwards;
+    animation: homeIntroOverlayExit 3.4s ease forwards;
 }
 
 .home-intro-terminal {
@@ -73,7 +73,7 @@
 
 .home-intro-prompt {
     color: var(--md-primary-fg-color);
-    animation: homeIntroType 0.48s steps(16, end) 0.16s forwards;
+    animation: homeIntroType 0.62s steps(16, end) 0.28s forwards;
 }
 
 .home-intro-prompt::after {
@@ -89,12 +89,12 @@
 
 .home-intro-load {
     color: var(--md-default-fg-color);
-    animation: homeIntroType 0.68s steps(34, end) 0.7s forwards;
+    animation: homeIntroType 0.88s steps(34, end) 1.05s forwards;
 }
 
 .home-intro-motto {
     color: var(--md-default-fg-color--light);
-    animation: homeIntroType 0.5s steps(12, end) 1.25s forwards;
+    animation: homeIntroType 0.72s steps(12, end) 2.05s forwards;
 }
 
 @supports selector(:has(*)) {
@@ -109,20 +109,20 @@
     }
 
     .md-typeset:has(.home-intro-overlay) > h1 {
-        animation-delay: 1.12s;
+        animation-delay: 2.75s;
     }
 
     .md-typeset:has(.home-intro-overlay) > blockquote {
-        animation-delay: 1.22s;
+        animation-delay: 2.9s;
     }
 
     .md-typeset:has(.home-intro-overlay) > h2 {
-        animation-delay: 1.34s;
+        animation-delay: 3.03s;
     }
 
     .md-typeset:has(.home-intro-overlay) > .grid.cards,
     .md-typeset:has(.home-intro-overlay) > ul {
-        animation-delay: 1.44s;
+        animation-delay: 3.16s;
     }
 }
 
@@ -138,7 +138,7 @@
 
 @keyframes homeIntroOverlayExit {
     0%,
-    76% {
+    84% {
         opacity: 1;
         visibility: visible;
     }
