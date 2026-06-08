@@ -2,6 +2,211 @@
    ZhangAoYu's Blog - 自定义样式
    ============================================= */
 
+/* --- 首页开场动画 --- */
+.home-intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    pointer-events: none;
+    background-color: var(--md-default-bg-color);
+    background-image:
+        linear-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+    animation: homeIntroOverlayExit 1.85s ease forwards;
+}
+
+.home-intro-terminal {
+    width: min(32rem, calc(100vw - 2rem));
+    overflow: hidden;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 8px;
+    background: var(--md-code-bg-color);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
+}
+
+.home-intro-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    height: 2.25rem;
+    padding: 0 0.9rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.home-intro-bar span {
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+}
+
+.home-intro-bar span:nth-child(1) {
+    background: #ef4444;
+}
+
+.home-intro-bar span:nth-child(2) {
+    background: #f59e0b;
+}
+
+.home-intro-bar span:nth-child(3) {
+    background: #22c55e;
+}
+
+.home-intro-body {
+    padding: 1.35rem 1.5rem 1.45rem;
+    font-family: var(--md-code-font-family);
+    font-size: 0.82rem;
+    line-height: 1.85;
+}
+
+.home-intro-line,
+.home-intro-motto {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(0 100% 0 0);
+}
+
+.home-intro-prompt {
+    color: var(--md-primary-fg-color);
+    animation: homeIntroType 0.48s steps(16, end) 0.16s forwards;
+}
+
+.home-intro-prompt::after {
+    display: inline-block;
+    width: 0.55em;
+    height: 1.1em;
+    margin-left: 0.35rem;
+    vertical-align: -0.18em;
+    background: currentColor;
+    content: "";
+    animation: homeIntroCursor 0.58s steps(1, end) infinite;
+}
+
+.home-intro-load {
+    color: var(--md-default-fg-color);
+    animation: homeIntroType 0.68s steps(34, end) 0.7s forwards;
+}
+
+.home-intro-motto {
+    color: var(--md-default-fg-color--light);
+    animation: homeIntroType 0.5s steps(12, end) 1.25s forwards;
+}
+
+@supports selector(:has(*)) {
+    .md-typeset:has(.home-intro-overlay) > h1,
+    .md-typeset:has(.home-intro-overlay) > blockquote,
+    .md-typeset:has(.home-intro-overlay) > h2,
+    .md-typeset:has(.home-intro-overlay) > .grid.cards,
+    .md-typeset:has(.home-intro-overlay) > ul {
+        opacity: 0;
+        transform: translateY(0.6rem);
+        animation: homeIntroContentIn 0.55s ease forwards;
+    }
+
+    .md-typeset:has(.home-intro-overlay) > h1 {
+        animation-delay: 1.12s;
+    }
+
+    .md-typeset:has(.home-intro-overlay) > blockquote {
+        animation-delay: 1.22s;
+    }
+
+    .md-typeset:has(.home-intro-overlay) > h2 {
+        animation-delay: 1.34s;
+    }
+
+    .md-typeset:has(.home-intro-overlay) > .grid.cards,
+    .md-typeset:has(.home-intro-overlay) > ul {
+        animation-delay: 1.44s;
+    }
+}
+
+[data-md-color-scheme="slate"] .home-intro-overlay {
+    background-image:
+        linear-gradient(rgba(129, 140, 248, 0.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(129, 140, 248, 0.09) 1px, transparent 1px);
+}
+
+[data-md-color-scheme="slate"] .home-intro-terminal {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.38);
+}
+
+@keyframes homeIntroOverlayExit {
+    0%,
+    76% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes homeIntroType {
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes homeIntroCursor {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes homeIntroContentIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-intro-overlay {
+        padding: 1rem;
+    }
+
+    .home-intro-body {
+        padding: 1rem 1.1rem 1.1rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-intro-overlay {
+        animation: homeIntroOverlayExit 0.2s ease forwards;
+    }
+
+    .home-intro-line,
+    .home-intro-motto {
+        clip-path: inset(0 0 0 0);
+        animation: none;
+    }
+
+    .home-intro-prompt::after {
+        animation: none;
+    }
+
+    @supports selector(:has(*)) {
+        .md-typeset:has(.home-intro-overlay) > h1,
+        .md-typeset:has(.home-intro-overlay) > blockquote,
+        .md-typeset:has(.home-intro-overlay) > h2,
+        .md-typeset:has(.home-intro-overlay) > .grid.cards,
+        .md-typeset:has(.home-intro-overlay) > ul {
+            opacity: 1;
+            transform: none;
+            animation: none;
+        }
+    }
+}
+
 /* --- 首页卡片样式 --- */
 .md-typeset .grid.cards > ul > li {
     border: 1px solid var(--md-default-fg-color--lightest);

@@ -2,6 +2,21 @@
 icon: lucide/home
 ---
 
+<div class="home-intro-overlay" aria-hidden="true">
+  <div class="home-intro-terminal">
+    <div class="home-intro-bar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="home-intro-body">
+      <p class="home-intro-line home-intro-prompt">$ boot zayu.blog</p>
+      <p class="home-intro-line home-intro-load">Loading notes, code, and ideas...</p>
+      <p class="home-intro-motto">文明其精神，野蛮其体魄</p>
+    </div>
+  </div>
+</div>
+
 # 文明其精神，野蛮其体魄
 
 > :wave: 欢迎来到我的技术博客！这里记录我在编程路上的学习笔记、技术探索和项目实践。
