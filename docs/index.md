@@ -10,7 +10,7 @@ icon: lucide/home
       <span></span>
     </div>
     <div class="home-intro-body">
-      <p class="home-intro-line home-intro-prompt">$ boot zayu.blog</p>
+      <p class="home-intro-line home-intro-prompt">$ boot AoyuZhang.blog</p>
       <p class="home-intro-line home-intro-load">Loading notes, code, and ideas...</p>
       <p class="home-intro-motto">文明其精神，野蛮其体魄</p>
     </div>
