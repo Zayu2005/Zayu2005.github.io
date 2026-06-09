@@ -4,7 +4,7 @@ icon: lucide/user
 
 # 关于
 
-## :wave: Hi，我是 ZhangAoYu
+## :wave: Hi，我是 Zhang Aoyu
 
 一名热爱技术的开发者，喜欢用代码解决问题，乐于分享学习过程中的思考和收获。
 
