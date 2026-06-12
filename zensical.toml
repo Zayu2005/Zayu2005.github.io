@@ -65,7 +65,9 @@ nav = [
             { "Softmax" = "blog/dl/softmax.md"},
         ]},
         { "CTF" = [
+            { "CTF" = "blog/CTF/index.md"},
             { "Misc" = "blog/CTF/Misc.md"},
+            { "AWD" = "blog/CTF/AWD.md"},
         ]},
         { "工具与环境" = [
             { "工具与环境" = "blog/tools/index.md" },
@@ -216,5 +218,4 @@ code = "JetBrains Mono"
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
 link = "https://github.com/zayu2005"
-
 
